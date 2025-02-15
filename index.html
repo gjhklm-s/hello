@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction System</title>
+	 <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+		header {
+            background-color: yellow;
+            color: green;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+            background: white;
+            margin: 1rem auto;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #555;
+        }
+		h2{
+		color:red;
+		}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Auction 2.0</h1>
+		<a href="https://www.instagram.com/su.jin7301/?next=%2F"target="_blank">Click me</a>
+    </header>
+    <main>
+	<h2>Players List</h2>
+        <button onclick="showPlayers('wicketkeepers')">Wicketkeepers</button>
+        <button onclick="showPlayers('openers')">Openers</button>
+        <button onclick="showPlayers('middleOrder')">Middle Order</button>
+        <button onclick="showPlayers('allRounders')">All-Rounders</button>
+        <button onclick="showPlayers('spinners')">Spinners</button>
+        <button onclick="showPlayers('fastBowlers')">Fast Bowlers</button>
+        <button onclick="showPlayers('foreignPlayers')">Foreign Players</button>
+        <button onclick="showPlayers('indianPlayers')">Indian Players</button>
+		
+
+        <div id="playersList"></div>
+		-------------------------******************---------------------------
+        <h2>***Enter Auction Details***</h2>
+        <select id="teamName">
+            <option value="">Select User</option>
+            <option value="Sujin">Sujin</option>
+            <option value="Ajin">Ajin</option>
+            <option value="Abi">Abi</option>
+            <option value="Asoke">Asoke</option>
+            <option value="Kamal">Kamal</option>
+            <option value="Anish">Anish</option>
+            <option value="DD">DD</option>
+            <option value="Raja">Raja</option>
+            <option value="Aswath">Aswath</option>
+            <option value="Varshan">Varshan</option>
+        </select>
+        <button onclick="setTeam()">Select User</button>
+        <h3 id="selectedTeam"></h3>
+        <input type="text" id="playerName" placeholder="Enter Player Name">
+        <input type="number" id="price" placeholder="Enter Price in Cr">
+        <button onclick="addToAuction()">Add to Auction</button>
+        <h2>Users</h2>
+        <div id="teamsContainer"></div>
+		 <h2>About This Game</h2>
+		<ul>
+		<li>Total Budget in auction: 150cr.</li>
+		<li>Total number of RTM: 2.</li>
+		<li>Maximum number of players for a team: 20.</li>
+		<li>Minimum number of players for a team: 15.</li>
+		<li>Maximum number of foreign player: 8.</li>
+		<li>Totally 12 players in the paying11 (which can include 5 foreign players).</li>
+    </main>
+    
+</body>
+</html>
+
